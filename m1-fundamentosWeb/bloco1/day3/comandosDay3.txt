@@ -1,0 +1,43 @@
+
+ls : lista arquivos e diretórios
+
+ls -a : lista todos os arquivos e diretórios
+
+cd diretório : muda para o diretório inicial
+
+cd~ : muda para o diretório inicial
+
+cd .. : muda pra o diretório pai
+
+pwd : mostra o caminho do diretório atual
+
+cp arquivo1 arquivo2 : copia o arquivo1 e o chama de arquivo2
+
+mv arquivo1 arquivo2 : move ou renomeia arquivo1 para arquivo2
+
+rm arquivo : remove um arquivo
+
+rmdir diretório : remove um diretório
+
+cat arquivo : exibe um arquivo
+
+less arquivo : exibe um arquivo, uma página por vez
+
+head arquivo : exibe as primeiras linhas de um arquivo
+
+tail arquivo : exibe as últimas linhas de um arquivo
+
+grep 'palavra-chave' arquivo : procura por palavras-chave no arquivo
+
+wc arquivo : conta o número de linhas / palavras / caracteres no arquivo
+
+* : corresponde a qualquer número de caracteres
+
+? : corresponde a um caracter
+
+man comando : lê a página do manual online do comando informado
+
+whatis comando : breve descrição do comando informado
+
+apropos 'palavra-chave' : correponde a comandos com palvras-chave em suas páginas de manual
+
