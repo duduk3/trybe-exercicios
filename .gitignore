@@ -1,4 +1,5 @@
-*.txt/
+\!important!.txt
+\!*!.txt
 repositorio_teste_github/
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode
