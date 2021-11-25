@@ -62,4 +62,38 @@ main {
     line-height: 1.2;
 }
 
+.hyperlinks{
+    text-align: center;
+    padding: 50px;
+}
 
+.hyperlinks a{
+    text-decoration: none;
+    font-size: 2em;
+    text-align: center;
+    margin: 50px;
+    color: rgb(88, 4, 4);
+}
+
+.lists {
+    width: 60%;
+    align-content: center;
+    margin: 0 auto 80px;
+    background-color: rgb(121, 174, 207);
+    padding: 20px 0;
+}
+
+.lists h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.lists ul, ol {
+    margin-left: 80px;
+    font-size: 1.35em;
+}
+
+.lists a {
+    text-decoration: none;
+    color: rgb(3, 83, 79);
+}
