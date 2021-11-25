@@ -1,0 +1,93 @@
+    body {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .container {
+        background-color:rgb(186, 206, 226);
+        padding: 10px;
+    }
+
+    .nav-bar {
+        position: fixed;
+        width: 100%;
+        background-color: mediumblue;
+        padding: 12px 50px;
+    }
+
+    .nav-bar a {
+        display: inline-block;
+        margin: 0 50px;
+        color: #fff;
+    }
+
+    .description-container {
+        padding-top: 50px;
+    }
+
+    h1 {
+        font-size: 40px;
+        color: rgb(5, 5, 80);
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    .picture {
+        height: 200px;
+        padding: 5px;
+    }
+    
+    #minha-foto {
+        float: left;
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: 70px;
+        background-color: grey;
+    }
+
+    ul {
+        background-color: lightsalmon;
+        text-align: start;
+    }    
+
+    .description {
+        position: absolute;
+        width: 60%;
+        margin-top: 60px;
+        padding-left: 300px;
+        font-weight: 600;
+    }    
+
+    p {
+        font-size: 1.2em;
+        width: 80%;
+        margin: 30px auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }    
+
+    ol {
+        font-style: italic;
+        line-height: 50px;
+        text-decoration: lime;
+    }
+
+    h2 {
+        color: indigo;
+        margin: 50px 30px;
+    }
+
+    .hyperlinks {
+        text-decoration: none;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .lists {
+        display: block;
+        width: 60%;
+        align-content: center;
+        margin: auto;
+    }
+
+
+
