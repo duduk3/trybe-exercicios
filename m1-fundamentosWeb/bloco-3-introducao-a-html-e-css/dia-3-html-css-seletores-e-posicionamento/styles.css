@@ -91,6 +91,7 @@ main {
 .lists ul, ol {
     margin-left: 80px;
     font-size: 1.35em;
+    line-height: 1.5;
 }
 
 .lists a {
