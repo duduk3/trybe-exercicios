@@ -50,3 +50,14 @@ if (media > 20){
 
 
 
+// ** Exercício 5 - imprime o maior número do array
+let maior = 0;
+
+for (let i = 0; i < numbers.length; i += 1) {
+    if ( numbers[i] > maior){
+        maior = numbers[i];
+    };
+}
+    console.log('O maior número do array é :',maior);
+
+
