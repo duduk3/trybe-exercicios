@@ -68,7 +68,6 @@ for (let i = 0; i < numbers.length; i += 1) {
     if ( numbers[i] % 2 === 1){
         impar += 1;
     };
-    //console.log('O número',numbers[i],'é ímpar. Ele é o',i+1,'º do array.' );
 }
 
 if(impar > 1) {
@@ -80,3 +79,20 @@ else if (impar = 1 ) {
 else {
     console.log('nenhum valor ímpar encontrado');
 }
+
+
+
+// ** Exercício 5 - imprime o menor número do array
+let menor = numbers[0];
+
+for (let i = 0; i < numbers.length; i += 1) {
+    if ( numbers[i] < menor){
+        menor = numbers[i];
+    };
+}
+    console.log('O menor número do array é :',menor);
+
+
+
+
+
