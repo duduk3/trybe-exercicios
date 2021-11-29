@@ -61,3 +61,22 @@ for (let i = 0; i < numbers.length; i += 1) {
     console.log('O maior número do array é :',maior);
 
 
+
+// ** Exercício 6 - imprime o número do array se for ímpar
+let impar = 0;
+for (let i = 0; i < numbers.length; i += 1) {
+    if ( numbers[i] % 2 === 1){
+        impar += 1;
+    };
+    //console.log('O número',numbers[i],'é ímpar. Ele é o',i+1,'º do array.' );
+}
+
+if(impar > 1) {
+    console.log('Existem',impar,'números ímpares no array.' )
+}
+else if (impar = 1 ) {
+    console.log('Existem',impar,'número ímpar no array.' )
+} 
+else {
+    console.log('nenhum valor ímpar encontrado');
+}
