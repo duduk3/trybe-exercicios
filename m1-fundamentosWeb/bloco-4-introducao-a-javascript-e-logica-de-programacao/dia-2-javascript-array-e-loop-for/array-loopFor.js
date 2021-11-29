@@ -82,7 +82,7 @@ else {
 
 
 
-// ** Exercício 5 - imprime o menor número do array
+// ** Exercício 7 - imprime o menor número do array
 let menor = numbers[0];
 
 for (let i = 0; i < numbers.length; i += 1) {
@@ -91,8 +91,16 @@ for (let i = 0; i < numbers.length; i += 1) {
     };
 }
     console.log('O menor número do array é :',menor);
+    
 
 
+// ** Exercício 8 - imprime um array de 1 à 25
+let aleatorios = [];
 
+for (let i = 0; i < 25; i += 1) {
+    aleatorios.push(i+1);
+}
+
+console.log(aleatorios);
 
 
