@@ -19,3 +19,17 @@ console.log('A soma dos números do array é:',soma,'.');
 
 
 
+// ** Exercício 3 - média do array
+
+let media = 0;
+
+for (let i = 0; i < numbers.length; i += 1) {
+    soma += numbers[i];
+}
+
+media = soma/numbers.length;
+
+console.log('A média dos números do array é:',media,'.');
+
+
+
