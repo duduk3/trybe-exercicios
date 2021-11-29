@@ -33,3 +33,20 @@ console.log('A média dos números do array é:',media,'.');
 
 
 
+// ** Exercício 4 - imprime se média do array é maior ou menor que 20
+
+
+for (let i = 0; i < numbers.length; i += 1) {
+    soma += numbers[i];
+}
+
+media = soma/numbers.length;
+
+if (media > 20){
+    console.log('A média dos números do array é maior que 20.');
+} else {
+    console.log('A média dos números do array é menor que 20.');
+}
+
+
+
