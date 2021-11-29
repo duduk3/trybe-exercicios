@@ -104,3 +104,12 @@ for (let i = 0; i < 25; i += 1) {
 console.log(aleatorios);
 
 
+// ** Exercício 9 - imprime o array anterior dividido por 2.
+let aleatoriosPor2 = [];
+
+for (let i = 0; i < 25; i += 1) {
+    aleatoriosPor2.push((i+1)/2);
+}
+
+console.log(aleatoriosPor2);
+
