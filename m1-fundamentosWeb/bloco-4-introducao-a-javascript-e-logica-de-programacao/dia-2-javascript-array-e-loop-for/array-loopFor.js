@@ -8,5 +8,14 @@ for (let i = 0; i < numbers.length; i += 1) {
 
 
 
+// ** Exercício 2 - soma do array
+
+let soma = 0;
+
+for (let i = 0; i < numbers.length; i += 1) {
+    soma += numbers[i];
+}
+console.log('A soma dos números do array é:',soma,'.');
+
 
 
