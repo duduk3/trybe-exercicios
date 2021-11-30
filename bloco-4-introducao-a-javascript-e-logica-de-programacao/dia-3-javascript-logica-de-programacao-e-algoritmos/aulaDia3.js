@@ -23,3 +23,20 @@ for ( let i = 1; i <= n; i += 1 ) {
 }
 
 
+//** */ Exercício 3 - criar um triângulo retângulo invertido de asterisco
+
+n = 5;
+asterisco = '';
+let espaco = '';
+
+for ( let i = 1; i <= n; i += 1 ) {
+    asterisco += '*';
+    espaco += ' '
+}
+
+for ( let i = 1; i <= n; i += 1 ) {
+    console.log(espaco.slice(0,-i) + asterisco.slice(0,i));
+}
+
+
+
