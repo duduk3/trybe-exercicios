@@ -65,6 +65,15 @@ let leitor = {
   
   console.log('\"O livro favorito de', leitor.nome,leitor.sobrenome,'se chama \'',leitor.livrosFavoritos[0].titulo,'\'\"');
 
+//** Exercício 7 do Dia 4 do bloco 4 */
 
+leitor.livrosFavoritos.push({
+    titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+    autor: 'JK Rowling',
+    editor: 'Rocco',
+  }
+)
 
+console.log(leitor.livrosFavoritos)
 
+//** Exercício 8 do Dia 4 do bloco 4 */
