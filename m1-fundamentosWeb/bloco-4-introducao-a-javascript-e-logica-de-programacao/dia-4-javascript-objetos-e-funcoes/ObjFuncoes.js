@@ -23,4 +23,10 @@ for (let key in info) {
 
 
 
+//** Exercício 4 do Dia 4 do bloco 4 */
+
+for (let key in info) {
+    console.log(info[key]);
+}
+
 
