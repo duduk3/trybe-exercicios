@@ -58,7 +58,7 @@ for ( let i = 1; i <= n; i += 1 ) {
 }
 
 
-//** */ Exercício 6 - criar um árvore de natal de asterisco vazada no meio
+//** */ Exercício 6 - parte1 - criar um árvore de natal de asterisco vazada no meio
 
 n = 5;
 asterisco = '';
@@ -86,6 +86,41 @@ if (n % 2 === 1) {
 }
 
 
+//** */ Exercício 6 - parte2 - criar um árvore de natal de asterisco vazada no meio
+
+n = 5;
+asterisco = '';
+espaco = '';
+vazado = '';
+
+if (n % 2 === 1) {
+    for ( let i = 1; i <= n; i += 1 ) {
+        espaco += ' ';
+    }
+    
+    console.log(espaco.slice(0,-1) + '*');
+    console.log('');
+    
+    for ( let i = 1; i <= n; i += 1 ) {
+        asterisco += '*';
+        vazado += ' ';
+
+        if (i % 2 === 1) {
+            if(asterisco.length === 1) {
+                console.log(espaco.slice(0,-i-1) + asterisco + ' ' + asterisco);
+            }
+            else {
+                console.log(' ' + espaco.slice(0,-i-1) + asterisco.slice(0,-i+1) + vazado.slice(0,-i-1) + vazado + asterisco.slice(0,-i+1));
+            }
+        }
+        else {
+            console.log('');
+        }
+
+    }
+    console.log('');
+    console.log(asterisco + asterisco.slice(0,-1));
+}
 
 
 
