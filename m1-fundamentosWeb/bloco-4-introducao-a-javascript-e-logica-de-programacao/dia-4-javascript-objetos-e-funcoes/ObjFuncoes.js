@@ -48,3 +48,20 @@ for (let key in info, info2) {
 }
 
 
+//** Exercício 6 do Dia 4 do bloco 4 */
+
+let leitor = {
+    nome: 'Julia',
+    sobrenome: 'Pessoa',
+    idade: 21,
+    livrosFavoritos: [
+      {
+        titulo: 'O Pior Dia de Todos',
+        autor: 'Daniela Kopsch',
+        editora: 'Tordesilhas',
+      },
+    ],
+  };
+  
+
+
