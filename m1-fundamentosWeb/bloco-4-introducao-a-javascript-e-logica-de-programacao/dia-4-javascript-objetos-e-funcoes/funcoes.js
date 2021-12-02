@@ -28,12 +28,29 @@ let max = 0;
 function getMaxIndex (array){
     for ( let i = 0; i < maxArray.length; i += 1) {
         if (maxArray[i] > max){
-            max = maxArray[i];
+            max = i;
         }
     }
     console.log(max); 
 }
 
-getMaxIndex(maxArray)
+getMaxIndex(maxArray);
 
+
+
+//**Exercício 3 do dia 4 do blobo 4 */
+
+let minArray = [2, 4, 6, 7, 10, 0, -3];
+let min = minArray[0];
+
+function getMinIndex (array){
+    for ( let i = 0; i < minArray.length; i += 1) {
+        if (minArray[i] < min){
+            min = i;
+        }
+    }
+    console.log(min); 
+}
+
+getMinIndex(minArray);
 
