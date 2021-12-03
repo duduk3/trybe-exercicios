@@ -47,7 +47,6 @@
         - document.getElementById()
         - document.getElementsByClassName()
         - document.getElementsByTagName()
- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
  */
 
@@ -86,7 +85,17 @@ function changeColor1 () {
     };
     changeTitle();
 
+//= ========================================================================
+//* Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 
+    function changeAllP () {
+        let upperCaseP = document.getElementsByTagName("p")
+        for ( let i = 0; i < upperCaseP.length; i += 1) {
+            upperCaseP[i].innerText = upperCaseP[i].innerText.toUpperCase();
+        }
+    };
+    changeAllP();
+   
 
 
     </script>
