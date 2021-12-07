@@ -57,49 +57,33 @@
 <body>
   
   <script>
-    function appendH1(elementoPai,elementoFilho) {
-        let filho = document.createElement(elementoFilho);
-        let pai = document.querySelector(elementoPai);
-        pai.appendChild(filho);
+      function appendElementClass(elementoPai,elementoFilho,classe) {
+      let filho = document.createElement(elementoFilho);
+      let pai = document.querySelector(elementoPai);
+      filho.className = classe;
+      pai.appendChild(filho);
     };
 
-    appendH1("body", "h1");
+    function appendElement(elementoPai,elementoFilho) {
+      let filho = document.createElement(elementoFilho);
+      let pai = document.querySelector(elementoPai);
+      pai.appendChild(filho);
+    };
+
+    appendElement("body", "h1");
     
     document.getElementsByTagName('h1')[0].innerText = "Exercício 5.2 - JavaScript DOM";
     
-    function appendMain(elementoPai,elementoFilho) {
-        let filho = document.createElement(elementoFilho);
-        let pai = document.querySelector(elementoPai);
-        filho.classList.add('main-content');
-        pai.appendChild(filho);
-    };
-    appendMain('body', 'main');
+    appendElementClass('body', 'main', 'main-content');
 
-    function appendSectionCenter(elementoPai,elementoFilho) {
-        let filho = document.createElement(elementoFilho);
-        let pai = document.querySelector(elementoPai);
-        filho.classList.add('center-content');
-        pai.appendChild(filho);
-    };
-    appendSectionCenter('main', 'section');
+    appendElementClass('main', 'section', 'center-content');
 
-    function appendP(elementoPai,elementoFilho) {
-        let filho = document.createElement(elementoFilho);
-        let pai = document.querySelector(elementoPai);
-        pai.appendChild(filho);
-    };
-    appendP('section', 'p');
+    appendElement('section', 'p');
 
     document.getElementsByTagName('p')[0].innerText = "O DOM está presente nos navegadores para facilitar a vida dos desenvolvedores";
 
-    function appendSectionClass(elementoPai,elementoFilho,classe) {
-        let filho = document.createElement(elementoFilho);
-        let pai = document.querySelector(elementoPai);
-        filho.className = classe;
-        pai.appendChild(filho);
-    };
-    appendSectionClass('main', 'section', 'left-content');
-    appendSectionClass('main', 'section', 'right-content');
+    appendElementClass('main', 'section', 'left-content');
+    appendElementClass('main', 'section', 'right-content');
 
 
 
