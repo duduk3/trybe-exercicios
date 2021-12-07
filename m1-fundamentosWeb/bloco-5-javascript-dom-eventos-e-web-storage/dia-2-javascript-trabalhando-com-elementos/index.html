@@ -83,7 +83,17 @@
         pai.appendChild(filho);
     };
 
-    appendSection('main', 'section')
+    appendSection('main', 'section');
+
+    function appendP(elementoPai,elementoFilho) {
+        let filho = document.createElement(elementoFilho);
+        let pai = document.querySelector(elementoPai);
+        pai.appendChild(filho);
+    };
+    appendP('section', 'p');
+
+    document.getElementsByTagName('p')[0].innerText = "O DOM está presente nos navegadores para facilitar a vida dos desenvolvedores";
+
 
   </script>
 </body>
