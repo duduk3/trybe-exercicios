@@ -111,10 +111,14 @@
     document.getElementsByTagName('h1')[0].className = 'title';
 
     let takeH3 = document.getElementsByTagName('h3')
-
     for( let i = 0; i < takeH3.length; i += 1 ){
       takeH3[i].className = 'description';
     }
+
+    let listElement = document.getElementsByTagName('main')[0]; 
+    listElement.removeChild(listElement.getElementsByTagName('section')[1]);
+
+    document.getElementsByClassName('right-content')[0].style.margin = 'auto';
 
 </script>
 </body>
