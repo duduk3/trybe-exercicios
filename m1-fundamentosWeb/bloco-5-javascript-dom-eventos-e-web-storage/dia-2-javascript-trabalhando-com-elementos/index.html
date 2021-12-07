@@ -95,21 +95,14 @@
     pai = document.getElementsByClassName('right-content');
     pai[0].appendChild(filho);
 
+    let listText = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
     for( let i = 0; i < 10; i += 1 ){
       filho = document.createElement('li');
       pai = document.getElementsByClassName('right-content');
       pai[0].appendChild(filho);
+      document.getElementsByTagName('li')[i].innerText = listText[i]; 
     }
-    document.getElementsByTagName('li')[0].innerText = 'um'; 
-    document.getElementsByTagName('li')[1].innerText = 'dois'; 
-    document.getElementsByTagName('li')[2].innerText = 'três'; 
-    document.getElementsByTagName('li')[3].innerText = 'quatro'; 
-    document.getElementsByTagName('li')[4].innerText = 'cinco'; 
-    document.getElementsByTagName('li')[5].innerText = 'seis'; 
-    document.getElementsByTagName('li')[6].innerText = 'sete'; 
-    document.getElementsByTagName('li')[7].innerText = 'oito'; 
-    document.getElementsByTagName('li')[8].innerText = 'nove'; 
-    document.getElementsByTagName('li')[9].innerText = 'dez'; 
 
   </script>
 </body>
