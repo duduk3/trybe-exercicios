@@ -85,8 +85,12 @@
     appendElementClass('main', 'section', 'left-content');
     appendElementClass('main', 'section', 'right-content');
 
-
-
+    let filho = document.createElement('img');
+    let pai = document.getElementsByClassName('left-content');
+    filho.className = 'small-image';
+    filho.src = 'https://picsum.photos/200';
+    pai[0].appendChild(filho);
+    
   </script>
 </body>
 </html>
