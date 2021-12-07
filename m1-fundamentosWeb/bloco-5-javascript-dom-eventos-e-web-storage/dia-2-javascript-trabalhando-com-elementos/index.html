@@ -76,6 +76,15 @@
 
     appendMain('body', 'main');
 
+    function appendSection(elementoPai,elementoFilho) {
+        let filho = document.createElement(elementoFilho);
+        let pai = document.querySelector(elementoPai);
+        filho.classList.add('center-content');
+        pai.appendChild(filho);
+    };
+
+    appendSection('main', 'section')
+
   </script>
 </body>
 </html>
