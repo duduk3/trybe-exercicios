@@ -73,17 +73,15 @@
         filho.classList.add('main-content');
         pai.appendChild(filho);
     };
-
     appendMain('body', 'main');
 
-    function appendSection(elementoPai,elementoFilho) {
+    function appendSectionCenter(elementoPai,elementoFilho) {
         let filho = document.createElement(elementoFilho);
         let pai = document.querySelector(elementoPai);
         filho.classList.add('center-content');
         pai.appendChild(filho);
     };
-
-    appendSection('main', 'section');
+    appendSectionCenter('main', 'section');
 
     function appendP(elementoPai,elementoFilho) {
         let filho = document.createElement(elementoFilho);
@@ -93,6 +91,15 @@
     appendP('section', 'p');
 
     document.getElementsByTagName('p')[0].innerText = "O DOM está presente nos navegadores para facilitar a vida dos desenvolvedores";
+
+    function appendSectionLeft(elementoPai,elementoFilho) {
+        let filho = document.createElement(elementoFilho);
+        let pai = document.querySelector(elementoPai);
+        filho.className = 'left-content';
+        pai.appendChild(filho);
+    };
+    appendSectionLeft('main', 'section');
+
 
 
   </script>
