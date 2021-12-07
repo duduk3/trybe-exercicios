@@ -97,7 +97,7 @@
 
     let listText = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
 
-    for( let i = 0; i < 10; i += 1 ){
+    for( let i = 0; i < listText.length; i += 1 ){
       filho = document.createElement('li');
       pai = document.getElementsByClassName('right-content');
       pai[0].appendChild(filho);
@@ -122,6 +122,11 @@
 
     let filhoMain = document.getElementsByClassName('center-content')[0];
     filhoMain.parentNode.style.backgroundColor = 'green';
+
+    let TakeLiPai = document.getElementsByClassName('right-content')[0];
+    TakeLiPai.removeChild(TakeLiPai.getElementsByTagName('li')[8]);
+    TakeLiPai.removeChild(TakeLiPai.getElementsByTagName('li')[8]);
+     
 
 </script>
 </body>
