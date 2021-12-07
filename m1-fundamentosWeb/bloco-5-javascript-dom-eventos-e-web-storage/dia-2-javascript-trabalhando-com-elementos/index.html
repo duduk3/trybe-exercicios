@@ -92,13 +92,14 @@
 
     document.getElementsByTagName('p')[0].innerText = "O DOM está presente nos navegadores para facilitar a vida dos desenvolvedores";
 
-    function appendSectionLeft(elementoPai,elementoFilho) {
+    function appendSectionClass(elementoPai,elementoFilho,classe) {
         let filho = document.createElement(elementoFilho);
         let pai = document.querySelector(elementoPai);
-        filho.className = 'left-content';
+        filho.className = classe;
         pai.appendChild(filho);
     };
-    appendSectionLeft('main', 'section');
+    appendSectionClass('main', 'section', 'left-content');
+    appendSectionClass('main', 'section', 'right-content');
 
 
 
