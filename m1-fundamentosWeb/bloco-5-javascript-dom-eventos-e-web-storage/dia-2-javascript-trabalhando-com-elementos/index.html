@@ -65,7 +65,17 @@
 
     appendH1("body", "h1");
     
-    document.getElementsByTagName('h1')[0].innerText = "Exercício 5.2 - JavaScript DOM"; 
+    document.getElementsByTagName('h1')[0].innerText = "Exercício 5.2 - JavaScript DOM";
+    
+    function appendMain(elementoPai,elementoFilho) {
+        let filho = document.createElement(elementoFilho);
+        let pai = document.querySelector(elementoPai);
+        filho.classList.add('main-content');
+        pai.appendChild(filho);
+    };
+
+    appendMain('body', 'main');
+
   </script>
 </body>
 </html>
