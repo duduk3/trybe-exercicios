@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  
+  <script>
+      function appendElementClass(elementoPai,elementoFilho,classe) {
+      let filho = document.createElement(elementoFilho);
+      let pai = document.querySelector(elementoPai);
+      filho.className = classe;
+      pai.appendChild(filho);
+    };
+
+    function appendElement(elementoPai,elementoFilho) {
+      let filho = document.createElement(elementoFilho);
+      let pai = document.querySelector(elementoPai);
+      pai.appendChild(filho);
+    };
+
+    appendElement("body", "h1");
+    
+    document.getElementsByTagName('h1')[0].innerText = "Exercício 5.2 - JavaScript DOM";
+    
+    appendElementClass('body', 'main', 'main-content');
+
+    appendElementClass('main', 'section', 'center-content');
+
+    appendElement('section', 'p');
+
+    document.getElementsByTagName('p')[0].innerText = "O DOM está presente nos navegadores para facilitar a vida dos desenvolvedores";
+
+    appendElementClass('main', 'section', 'left-content');
+    appendElementClass('main', 'section', 'right-content');
+
+    let filho = document.createElement('img');
+    let pai = document.getElementsByClassName('left-content');
+    filho.className = 'small-image';
+    filho.src = 'https://picsum.photos/200';
+    pai[0].appendChild(filho);
+    
+    filho = document.createElement('ul');
+    pai = document.getElementsByClassName('right-content');
+    pai[0].appendChild(filho);
+
+    let listText = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+    for( let i = 0; i < listText.length; i += 1 ){
+      filho = document.createElement('li');
+      pai = document.getElementsByClassName('right-content');
+      pai[0].appendChild(filho);
+      document.getElementsByTagName('li')[i].innerText = listText[i]; 
+    }
+
+    appendElement('main', 'h3');
+    appendElement('main', 'h3');
+    appendElement('main', 'h3');
+
+    document.getElementsByTagName('h1')[0].className = 'title';
+
+    let takeH3 = document.getElementsByTagName('h3')
+    for( let i = 0; i < takeH3.length; i += 1 ){
+      takeH3[i].className = 'description';
+    }
+
+    let listElement = document.getElementsByTagName('main')[0]; 
+    listElement.removeChild(listElement.getElementsByTagName('section')[1]);
+
+    document.getElementsByClassName('right-content')[0].style.margin = 'auto';
+
+    let filhoMain = document.getElementsByClassName('center-content')[0];
+    filhoMain.parentNode.style.backgroundColor = 'green';
+
+    let TakeLiPai = document.getElementsByClassName('right-content')[0];
+    TakeLiPai.removeChild(TakeLiPai.getElementsByTagName('li')[8]);
+    TakeLiPai.removeChild(TakeLiPai.getElementsByTagName('li')[8]);
+     
+
+</script>
+</body>
+</html>
