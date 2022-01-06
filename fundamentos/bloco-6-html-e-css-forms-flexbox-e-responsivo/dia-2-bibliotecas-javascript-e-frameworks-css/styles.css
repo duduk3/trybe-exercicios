@@ -14,10 +14,9 @@
     margin-top: 10px;
 }
 
-#btn-entrar{
+#btnSend{
     margin-top: 20px;
     width: 70px;
-    height: 20px;
+    height: 30px;
     border-radius: 4px;
-    background-color: aquamarine;
 }
