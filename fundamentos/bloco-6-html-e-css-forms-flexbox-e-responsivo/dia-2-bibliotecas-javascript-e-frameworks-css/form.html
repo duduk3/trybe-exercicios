@@ -12,39 +12,33 @@
         <h1 class="display-3">Formulário padrão</h1>
         <p><em>Após o preenchimento, o seu currículo estará pronto para apresentar ao empregador!</em></p>
     </header>
-    <form action="" method="get">
-        <div class="container">
-            <label for="name" class="form-label lead">Nome</label>
-            <input class="form-control" required type="text" name="name" id="name" maxlength="40">
-            <br>
-            <label for="email" class="form-label lead">E-mail</label>
-            <input class="form-control" required type="text" name="email" id="email" maxlength="50">
-            <br>
-            <label for="cpf" class="form-label lead">CPF</label>
-            <input class="form-control" required type="text" name="cpf" id="cpf" maxlength="11">
-            <br>
-            <label for="endereco" class="form-label lead">Endereço</label>
-            <input class="form-control" required type="text" name="endereco" id="endereco" maxlength="200">
-            <br>
-            <label for="cidade" class="form-label lead">Cidade</label>
-            <input class="form-control" required type="text" name="cidade" id="cidade" maxlength="28">
-            <br>
-            <label for="estado" class="form-label lead">Estado</label>
-            <select class="form-control" name="estado" id="estado" required>
-            </select>
-            <br>
-            <div class="form-check">
-                <input type="radio" name="tipo" id="tipo1" required value="casa">
-                <label for="tipo1" class="form-label lead">Casa</label>
+    <main>
+        <form action="" method="get">
+            <div class="container">
+                <label for="name" class="form-label lead">Nome</label>
+                <input class="form-control" required type="text" name="name" id="name" maxlength="40">
+                <label for="email" class="form-label lead">E-mail</label>
+                <input class="form-control" required type="text" name="email" id="email" maxlength="50">
+                <label for="cpf" class="form-label lead">CPF</label>
+                <input class="form-control" required type="text" name="cpf" id="cpf" maxlength="11">
+                <label for="endereco" class="form-label lead">Endereço</label>
+                <input class="form-control" required type="text" name="endereco" id="endereco" maxlength="200">
+                <label for="cidade" class="form-label lead">Cidade</label>
+                <input class="form-control" required type="text" name="cidade" id="cidade" maxlength="28">
+                <label for="estado" class="form-label lead">Estado</label>
+                <select class="form-select" name="estado" id="estado" required>
+                </select>
+                <div class="form-check container">
+                    <input class="form-check-input" type="radio" name="tipo" id="tipo1" required value="casa">
+                    <label for="tipo1" class="form-label lead">Casa</label>
+                </div>
+                <div class="form-check container">
+                    <input class="form-check-input" type="radio" name="tipo" id="tipo2" required value="apartamento">
+                    <label for="tipo2" class="form-label lead">Apartamento</label>
+                </div>
             </div>
-            <div class="form-check">
-                <input type="radio" name="tipo" id="tipo2" required value="apartamento">
-                <label for="tipo2" class="form-label lead">Apartamento</label>
-            </div>
-        </div>
 
-        <div class="container">
-            <fieldset class="form">
+            <div class="container">
                 <p>Resumo do Currículo</p>
                 <textarea name="resume" id="curriculo" cols="30" rows="10" maxlength="1000" required></textarea>
                 <p>Cargo</p>
@@ -55,10 +49,9 @@
                 <input type="text" name="data" id="inicio" required placeholder="dd/mm/aaaa">
                 <br>
                 <input type="submit" value="Enviar" id="btnSend">
-            </fieldset>
-        </div>
-    </form>
-
+            </div>
+        </form>
+    </main>
     <script src="./script.js"></script>
 </body>
 </html>

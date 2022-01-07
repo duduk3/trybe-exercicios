@@ -1,4 +1,15 @@
-*{
-    margin: 0px;
+body {
+    background-color: aliceblue;
+  }
+
+.container {
+margin-top: 20px;
+}
+  
+.form-select {
+    margin-bottom: 15px;
 }
 
+.form-check{
+    display: inline-block;
+}
