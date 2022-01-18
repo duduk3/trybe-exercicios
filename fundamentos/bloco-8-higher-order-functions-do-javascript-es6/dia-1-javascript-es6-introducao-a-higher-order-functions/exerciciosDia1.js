@@ -18,24 +18,43 @@
 
 // console.log(newEmployees(createEmail));
 
-//*----======== EXERCÍCIO 2 DO DIA 1 BLOCO 8 =========----*//
+// //*----======== EXERCÍCIO 2 DO DIA 1 BLOCO 8 =========----*//
 
-const goodLuck = (yourNumber, callBack) => {
-    if ( yourNumber === callBack ) {
-        return "Parabéns você ganhou";
-    } else {
-        return "Tente novamente";s
-    }
-}
+// const goodLuck = (yourNumber, callBack) => {
+//     if ( yourNumber === callBack ) {
+//         return "Parabéns você ganhou";
+//     } else {
+//         return "Tente novamente";s
+//     }
+// }
 
 
-const sortNum = () => {
-    const luckNum = Math.round(Math.random() * 4) + 1;
+// const sortNum = () => {
+//     const luckNum = Math.round(Math.random() * 4) + 1;
     
-    return luckNum;
-}
+//     return luckNum;
+// }
 
-console.log(goodLuck(1, sortNum()));
+// console.log(goodLuck(1, sortNum()));
 
 //*----======== EXERCÍCIO 3 DO DIA 1 BLOCO 8 =========----*//
 
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const yourGrade = (feedback, answer) => {
+    let note = 0;
+    for (let i = 0; i < feedback.length; i++) {
+        if ( feedback[i] !== answer[i] && answer[i] !== 'N.A' ) {
+            note -= 0.5; 
+        } else if ( feedback[i] === answer[i] ) {
+            note += 1;
+        }
+    }
+    return note;
+};
+
+const correction = (a, b, callBack) => callBack(a, b);
+
+
+console.log(correction(RIGHT_ANSWERS, STUDENT_ANSWERS, yourGrade));
