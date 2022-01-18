@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type="text" id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+    const sum = (value1, value2) => {
+      value1 = document.getElementById('value1').value;
+      value2 = document.getElementById('value2').value;
+      try {
+        verifyIsNumber(value1, value2);
+        const result = parseInt(value1) + parseInt(value2);
+        document.getElementById('result').innerHTML = result;
+      } catch (err) {
+        document.getElementById('result').innerHTML = err.message;
+      } finally {
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
+      }
+    }
+
+    const verifyIsNumber = ( num1, num2 ) => {
+      console.log( num1, typeof(num1), num2, typeof(num2) );
+      if ( num1 != Number || num2 != Number ) {
+          throw new Error('Por favor: Preencha os 2 campos com números!');
+        } 
+    }
+
+
+
+    window.onload = () => {
+      const button = document.getElementById('button');
+      button.addEventListener('click', sum);
+    }
+  </script>
+</body>
+</html>
