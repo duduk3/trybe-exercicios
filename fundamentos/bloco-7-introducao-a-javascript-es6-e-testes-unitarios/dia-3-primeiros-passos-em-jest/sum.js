@@ -11,3 +11,22 @@ function sum(a, b) {
   module.exports = sum;
 
 
+const verificaNum = (num) => {
+  if (num !== 5) {
+    throw('Esse valor não é um número ');
+  }
+
+}
+
+
+const testandoTryCat = (num) => {
+  verificaNum(num);
+  try {
+    num * 2;
+  } catch (error) {
+    console.log(error.message);
+  }
+}  
+console.log("Estudando: \n \* Expressões Regulares");
+
+testandoTryCat(4);
