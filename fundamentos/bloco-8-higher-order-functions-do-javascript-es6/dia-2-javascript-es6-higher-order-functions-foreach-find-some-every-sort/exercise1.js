@@ -62,3 +62,16 @@ const books = [
   ];
   
   // Adicione o código do exercício aqui:
+//*------======= EXERCÍCIO 1 DO DIA 2 DO BLOCO =======-------*//
+
+function authorBornIn1947(element) {
+    // escreva aqui o seu código
+    if (element.author.birthYear === 1947) {
+      console.log(element);
+    }
+  }
+
+  books.find((book) => {
+    authorBornIn1947(book);
+  });
+
