@@ -83,3 +83,50 @@ let newArray = [];
   books.map((book)=> formatedBookNames(book));
 
 console.log(newArray);
+
+//*----===== EXERCÍCIO 1 DO DIA 3 DO BLOCO 8 ----=====*//
+
+
+// const expectedResult = [
+//     {
+//       age: 31,
+//       author: 'Isaac Asimov',
+//     },
+//     {
+//       age: 38,
+//       author: 'H. P. Lovecraft',
+//     },
+//     {
+//       age: 39,
+//       author: 'Stephen King',
+//     },
+//     {
+//       age: 43,
+//       author: 'George R. R. Martin',
+//     },
+//     {
+//       age: 45,
+//       author: 'Frank Herbert',
+//     },
+//     {
+//       age: 62,
+//       author: 'J. R. R. Tolkien',
+//     },
+//   ];
+
+let authorAge = [];
+
+  function nameAndAge(book) {
+    let newAge = book.releaseYear - book.author.birthYear;
+    let newAuthor = {
+        age: newAge,
+        author: book.author.name
+    };
+    authorAge.push(newAuthor);
+    return authorAge;
+  }
+
+books.map((book)=>nameAndAge(book));
+
+
+console.log(authorAge.sort((a, b) => a.age - b.age));
