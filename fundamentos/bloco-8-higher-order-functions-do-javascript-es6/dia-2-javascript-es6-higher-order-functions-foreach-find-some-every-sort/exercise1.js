@@ -75,3 +75,24 @@ function authorBornIn1947(element) {
     authorBornIn1947(book);
   });
 
+//*------======= EXERCÍCIO 2 DO DIA 2 DO BLOCO =======-------*//
+
+let nameBook = 'Este nome deve ser bem grande para que o nome dos livros do array seja menor que ele, e valide a condição do loop';
+function smallerName(book) {
+    // escreva aqui o seu código
+    if(book.name.length < nameBook.length) {
+      nameBook = book.name;
+    }
+    // Variável nameBook que receberá o valor do menor nome;
+    return nameBook;;
+  }
+
+books.forEach((book) => {
+  smallerName(book);
+})
+
+console.log(nameBook);
+
+//*------======= EXERCÍCIO 2 DO DIA 2 DO BLOCO =======-------*//
+
+
