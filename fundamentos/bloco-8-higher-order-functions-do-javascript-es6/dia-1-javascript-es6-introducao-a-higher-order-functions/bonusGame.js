@@ -44,23 +44,23 @@ const mageDamage = () => {
 };
 
 
-const warriorTurn = (rodada1) => {
-    let dano1 = rodada1();
-    dragon.healthPoints = dragon.healthPoints - dano1;
-    warrior.damage = dano1;
+const warriorTurn = (damage) => {
+    let danoWarrior = damage();
+    dragon.healthPoints = dragon.healthPoints - danoWarrior;
+    warrior.damage = danoWarrior;
 };
 
-const mageTurn = (rodada2) => {
-    let dano2 = rodada2();
-    dragon.healthPoints = dragon.healthPoints - dano2;
-    mage.damage = dano2;
+const mageTurn = (damage) => {
+    let danoMage = damage().dano;
+    dragon.healthPoints = dragon.healthPoints - danoMage;
+    mage.damage = danoMage;
 };
 
-const dragonTurn = (rodada3) => {
-    let dano3 = rodada3();
-    mage.healthPoints = mage.healthPoints - dano3;
-    warrior.healthPoints = warrior.healthPoints - dano3;
-    dragon.damage = dano3;
+const dragonTurn = (damage) => {
+    let danoDragon = damage();
+    mage.healthPoints = mage.healthPoints - danoDragon;
+    warrior.healthPoints = warrior.healthPoints - danoDragon;
+    dragon.damage = danoDragon;
 };
 
 const gameActions = {
