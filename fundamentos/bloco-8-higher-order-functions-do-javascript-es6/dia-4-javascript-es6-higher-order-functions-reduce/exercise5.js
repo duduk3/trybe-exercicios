@@ -7,7 +7,15 @@ const names = [
     'Abeladerco', 'Adieidy', 'Alarucha',
   ];
   
-  function containsA() {
-    // escreva seu código aqui
+  let count = 0;
+  function containsA(result, letter, index, array) {
+    for (let i = 0; i < letter.length; i += 1) {
+      if (letter[i] === 'a' || letter[i] === 'A') {
+        count += 1;
+      }
+    }
   }
 
+const final = names.reduce(containsA, 0);
+
+console.log(count);
