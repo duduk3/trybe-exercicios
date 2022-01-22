@@ -105,9 +105,17 @@ console.log(resultExpeted);
 
 //*------======= EXERCÍCIO 5 DO DIA 2 DO BLOCO =======-------*//
 
-
-const everyoneWasBornOnSecXX = (someAuthor) => (
-  Object.values(someAuthor).every((books) => books.author.birthYear > 1900 && books.author.birthYear < 2000)
+const everyoneWasBornOnSecXX = (everyAuthor) => (
+  Object.values(everyAuthor).every((books) => books.author.birthYear > 1900 && books.author.birthYear < 2000)
 );
 
 console.log(everyoneWasBornOnSecXX(books));
+
+
+//*------======= EXERCÍCIO 6 DO DIA 2 DO BLOCO =======-------*//
+
+const someBookWasReleaseOnThe80s = (someRelesead) => (
+  Object.values(someRelesead).some((books) => books.releaseYear > 1980 && books.releaseYear < 1990)
+);
+
+console.log(someBookWasReleaseOnThe80s(books));
