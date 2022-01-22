@@ -101,3 +101,13 @@ books.find((book)=> {
 const resultExpeted = books.sort((a, b) => b.releaseYear - a.releaseYear)
 
 console.log(resultExpeted);
+
+
+//*------======= EXERCÍCIO 5 DO DIA 2 DO BLOCO =======-------*//
+
+
+const everyoneWasBornOnSecXX = (someAuthor) => (
+  Object.values(someAuthor).every((books) => books.author.birthYear > 1900 && books.author.birthYear < 2000)
+);
+
+console.log(everyoneWasBornOnSecXX(books));
