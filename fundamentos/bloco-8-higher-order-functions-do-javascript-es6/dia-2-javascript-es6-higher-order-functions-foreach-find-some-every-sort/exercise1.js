@@ -91,4 +91,10 @@ console.log(nameBook);
 
 //*------======= EXERCÍCIO 3 DO DIA 2 DO BLOCO =======-------*//
 
+books.find((book)=> {
+  book.name.length === 26 ? console.log(book) : book.name;
+})
+
+
+//*------======= EXERCÍCIO 4 DO DIA 2 DO BLOCO =======-------*//
 
