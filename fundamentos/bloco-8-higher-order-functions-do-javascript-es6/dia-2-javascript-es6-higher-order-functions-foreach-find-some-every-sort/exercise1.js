@@ -98,3 +98,6 @@ books.find((book)=> {
 
 //*------======= EXERCÍCIO 4 DO DIA 2 DO BLOCO =======-------*//
 
+const resultExpeted = books.sort((a, b) => b.releaseYear - a.releaseYear)
+
+console.log(resultExpeted);
