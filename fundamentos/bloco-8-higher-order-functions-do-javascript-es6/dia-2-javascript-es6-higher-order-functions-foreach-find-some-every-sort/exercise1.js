@@ -119,3 +119,24 @@ const someBookWasReleaseOnThe80s = (someRelesead) => (
 );
 
 console.log(someBookWasReleaseOnThe80s(books));
+
+
+//*------======= EXERCÍCIO 7 DO DIA 2 DO BLOCO =======-------*//
+
+let iqual = 0;
+let acerto = false;
+let count = 0;
+
+const result2 = (book) => {
+  if (book.author.birthYear !== iqual) {
+    iqual = book.author.birthYear;
+  } else {
+    acerto = true;
+    count += 1;
+  }
+};
+
+const expetedResult = books.sort((a,b)=> a.author.birthYear - b.author.birthYear).forEach(result2)
+
+
+console.log( acerto);
