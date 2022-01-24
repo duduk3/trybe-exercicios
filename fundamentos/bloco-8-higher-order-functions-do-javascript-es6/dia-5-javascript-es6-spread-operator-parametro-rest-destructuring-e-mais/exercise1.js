@@ -21,3 +21,52 @@ const sum = (...items) => items.reduce((acc, element)=> acc + element, 0);
 console.log(sum(1, 3, 5, 6, 8, 10));
 
 
+//* 3 - Escreva a função personLikes , que dado um objeto de parâmetro que representa uma pessoa, retorna todos os gostos daquela pessoa, conforme mostrado abaixo:
+
+const alex = {
+  nome: 'Alex',
+  age: 26,
+  likes: ['fly fishing'],
+  nationality: 'Australian',
+};
+
+const gunnar = {
+  nome: 'Gunnar',
+  age: 30,
+  likes: ['hiking', 'scuba diving', 'taking pictures'],
+  nationality: 'Icelandic',
+};
+
+// const { nome, age, likes } = gunnar;
+// console.log(`Esse é o ${nome}, ele tem ${age} anos. Ele gosta de: ${likes}`);
+
+// complete a assinatura da função abaixo
+const personLikes = (person) => {
+  const {nome, age, likes} = person;
+  return `${nome} is ${age} years old and likes ${likes.join(', ')}.`;
+}
+
+console.log(personLikes(alex)); // 'Alex is 26 years old and likes fly fishing.'
+console.log(personLikes(gunnar)); // 'Gunnar is 30 years old and likes hiking, scuba diving, taking pictures.'
+
+
+
+// // definindo o objeto
+// const character = {
+//   name: 'Luke SkyWalker',
+//   age: '53',
+//   description: {
+//     specieName: 'Human',
+//     jedi: true,
+//   },
+//   homeWorld: {
+//     name: 'Tatooine',
+//     population: '200000',
+//   },
+// };
+
+// // desestruturando o objeto:
+// const { name, age, homeWorld: { name: planetName }, description: { jedi } } = character;
+
+// // imprimindo os valores:
+// console.log(`Esse é o ${name}, ele tem ${age} anos, mora no planeta ${planetName} e, por incrível que possa parecer, ele ${jedi ? 'é um Jedi' : 'não é um Jedi'}.`);
