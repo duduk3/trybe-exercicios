@@ -61,7 +61,6 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
 
 //*----===== EXERCÍCIO 1 DO DIA 3 DO BLOCO 8 ----=====*//
 
@@ -73,10 +72,10 @@ const books = [
 //     'A Coisa - Terror - Stephen King',
 //     'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
 //   ];
+
 let newArray = [];
   
   function formatedBookNames(book) {
-    // escreva seu código aqui
     newArray.push(`${book.name} - ${book.genre} - ${book.author.name} `);
   }
 
@@ -165,9 +164,17 @@ console.log(authorAge.sort((a, b) => a.age - b.age));
 //     }
 //   ];
   
-  function fantasyOrScienceFiction() {
-    // escreva seu código aqui
+  function fantasyOrScienceFiction(book) {
+    if (book.genre === 'Ficção Científica' || book.genre === 'Fantasia') {
+      return book;
+    };
   }
+
+  const exitExercise3 = books.filter(fantasyOrScienceFiction);
+
+  console.log(exitExercise3);
+
+
 
 
 //*----===== EXERCÍCIO 4 DO DIA 3 DO BLOCO 8 ----=====*//
@@ -196,9 +203,19 @@ console.log(authorAge.sort((a, b) => a.age - b.age));
 //     },
 //   ];
   
-  function oldBooksOrdered() {
-    // escreva seu código aqui
+const timeCurrent = new Date().getFullYear();
+
+  function oldBooksOrdered(book) {
+    if ( timeCurrent - book.releaseYear >= 60 ) {
+      return book;
+    }
   }
+
+  const exitExercise4 = books.filter(oldBooksOrdered);
+
+
+
+  console.log(exitExercise4.sort((a, b)=> a.releaseYear - b.releaseYear ));
 
 
   //*----===== EXERCÍCIO 5 DO DIA 3 DO BLOCO 8 ----=====*//
@@ -210,10 +227,14 @@ console.log(authorAge.sort((a, b) => a.age - b.age));
 //     'J. R. R. Tolkien',
 //   ];
   
-  function fantasyOrScienceFictionAuthors() {
-    // escreva seu código aqui
+function fantasyOrScienceFictionAuthors(book) {
+  if (book.genre === 'Fantasia' || book.genre === 'Ficção Científica') {
+    return book.author.name;
   }
+}
+const exitExercise5 = books.filter(fantasyOrScienceFictionAuthors).map(fantasyOrScienceFictionAuthors);
 
+console.log(exitExercise5);
 
 //*----===== EXERCÍCIO 6 DO DIA 3 DO BLOCO 8 ----=====*//
 
@@ -224,6 +245,29 @@ console.log(authorAge.sort((a, b) => a.age - b.age));
 //     'O Chamado de Cthulhu',
 //   ];
   
-  function oldBooks() {
-    // escreva seu código aqui
+  function oldBooks(book) {
+    if ( timeCurrent - book.releaseYear >= 60 ) {
+      return book.name;
+    }
   }
+
+  const exitExercise6 = books.filter(oldBooks).map(oldBooks);
+
+  console.log(exitExercise6);
+
+
+//*----===== EXERCÍCIO 7 DO DIA 3 DO BLOCO 8 ----=====*//
+
+  // const expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName(book) {
+  if (book.author.name.indexOf(".", 2) === 2) {
+    return book.name;
+  }
+}
+
+const exitExercise7 = books.filter(authorWith3DotsOnName)//.map(authorWith3DotsOnName);
+
+console.log(exitExercise7);
+
+
