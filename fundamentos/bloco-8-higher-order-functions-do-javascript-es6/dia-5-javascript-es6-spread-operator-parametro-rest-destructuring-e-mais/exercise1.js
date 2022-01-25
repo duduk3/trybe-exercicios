@@ -50,23 +50,44 @@ console.log(personLikes(alex)); // 'Alex is 26 years old and likes fly fishing.'
 console.log(personLikes(gunnar)); // 'Gunnar is 30 years old and likes hiking, scuba diving, taking pictures.'
 
 
+//* 4 - Escreva uma função filterPeople que, dada uma lista de pessoas, retorna todas as pessoas australianas que nasceram no século 20:
 
-// // definindo o objeto
-// const character = {
-//   name: 'Luke SkyWalker',
-//   age: '53',
-//   description: {
-//     specieName: 'Human',
-//     jedi: true,
-//   },
-//   homeWorld: {
-//     name: 'Tatooine',
-//     population: '200000',
-//   },
-// };
+const people = [
+  {
+    name: 'Nicole',
+    bornIn: 1992,
+    nationality: 'Australian',
+  },
+  {
+    name: 'Harry',
+    bornIn: 2008,
+    nationality: 'Australian',
+  },
+  {
+    name: 'Toby',
+    bornIn: 1901,
+    nationality: 'Australian',
+  },
+  {
+    name: 'Frida',
+    bornIn: 1960,
+    nationality: 'Dannish',
+  },
+  {
+    name: 'Fernando',
+    bornIn: 2001,
+    nationality: 'Brazilian',
+  },
+];
 
-// // desestruturando o objeto:
-// const { name, age, homeWorld: { name: planetName }, description: { jedi } } = character;
+const filterPeople = (people) => {
+  const australianfilter = people.filter((person) => {
+    if (person.nationality === 'Australian' && person.bornIn >= 1900) {
+      return person;
+    } 
+  }).map((person) => person.name);
+  return australianfilter;
+}
 
-// // imprimindo os valores:
-// console.log(`Esse é o ${name}, ele tem ${age} anos, mora no planeta ${planetName} e, por incrível que possa parecer, ele ${jedi ? 'é um Jedi' : 'não é um Jedi'}.`);
+const pessoas = filterPeople(people);
+
