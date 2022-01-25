@@ -41,8 +41,8 @@ const gunnar = {
 // console.log(`Esse é o ${nome}, ele tem ${age} anos. Ele gosta de: ${likes}`);
 
 // complete a assinatura da função abaixo
-const personLikes = (person) => {
-  const {nome, age, likes} = person;
+const personLikes = ({nome, age, likes}) => {
+  //const {nome, age, likes} = person;
   return `${nome} is ${age} years old and likes ${likes.join(', ')}.`;
 }
 
@@ -138,9 +138,9 @@ const ships = [
   },
 ];
 
-const shipLength = (ship) => {
-  const {name, length, measurementUnit} = ship;
-  return `${ship.name} is ${ship.length} ${measurementUnit} long.`
+const shipLength = ({name, length, measurementUnit}) => {
+  //const {name, length, measurementUnit} = ship;
+  return `${name} is ${length} ${measurementUnit} long.`
 }
 
 console.log(shipLength(ships[0])) // 'Titanic is 269.1 meters long'
