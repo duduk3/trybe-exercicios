@@ -168,6 +168,27 @@ const yearSeasons = {
 };
 
 const {spring, summer, autumn, winter} = yearSeasons;
-const months = [...spring, ...summer, ...autumn, ...winter];
+const months = [  ...winter, ...spring, ...summer, ...autumn ];
 
-console.log(months);
+//*-- SOLUTION 1
+const a = months[1];
+const b = months[2];
+const c = months[3];
+const d = months[4];
+const e = months[5];
+const f = months[6];
+const g = months[7];
+const h = months[8];
+const i = months[9];
+const j = months[10];
+const k = months[11];
+const l = months[0];
+
+const newArrayMonths = [a,b,c,d,e,f,g,h,i,j,k,l];
+
+//*-- SOLUTION 2
+const [dez, jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov] = months;
+const newMonthsDestructure = [jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez];
+
+console.log(newArrayMonths);
+console.log(newMonthsDestructure);
