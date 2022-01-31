@@ -32,3 +32,20 @@ console.log(planetDistanceFromSun(jupiter)); // C
 console.log(planetDistanceFromSun(mars)); // A
 setTimeout(() => console.log(planetDistanceFromSun(venus)), 3000); // B
 setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
+
+
+
+const planet = [mars, venus, jupiter ];
+
+Array.prototype.groupBy = function(prop) {
+  let value = this.reduce((total, item) => {
+      let key = item[prop];
+      total[key] = (total[key] || []).concat(item);
+      return total;
+  }, {});
+  return value;
+};
+
+const groupPlanet = planet.groupBy('name');
+
+console.log(groupPlanet);
