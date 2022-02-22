@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  color: red;
+  text-align: center;
+  line-height: 20px;
+}
+
+.content {
+  color: blue;
+  margin-left: 48px;
+}
+
+.footer {
+  color: chocolate;
+  text-align: center;
+}
