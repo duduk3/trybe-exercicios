@@ -11,11 +11,16 @@ class CurriculumData extends React.Component {
             curriculum: {},
         }
         this.handleChange = this.handleChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     handleChange({ target }) {
         const { name, value } = target;
         this.setState({[name]: value});
+    }
+
+    onSubmit(object) {
+        return object;
     }
 
     render() {
@@ -67,8 +72,8 @@ class CurriculumData extends React.Component {
                                
                 <button value="Enviar" id="btnSend">Enviar</button>
             </fieldset>
-        )
-    }
+        );
+    };
 }
 
 export default CurriculumData;
