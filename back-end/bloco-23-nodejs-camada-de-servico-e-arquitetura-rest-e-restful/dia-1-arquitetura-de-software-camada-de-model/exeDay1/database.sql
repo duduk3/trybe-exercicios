@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS live_lecture_23_1;
+CREATE DATABASE IF NOT EXISTS exec1back;
 
-USE live_lecture_23_1;
+USE exec1back;
 
 DROP TABLE characters;
 
@@ -10,11 +10,10 @@ CREATE TABLE characters (
     cartoon VARCHAR(40) NOT NULL,
     CONSTRAINT pk_characters PRIMARY KEY (id)
 );
-INSERT INTO `live_lecture_23_1`.`characters`
-(
-`name`,
-`cartoon`)
+
+INSERT INTO
+    `live_lecture_23_1`.`characters` (`name`, `cartoon`)
 VALUES
-('Abigail', 'KND - A Turma do Bairro'),
-('Corvo', 'Solar Opposites'),
-('Dexter', 'Labotatório de Dexter');
+    ('Abigail', 'KND - A Turma do Bairro'),
+    ('Corvo', 'Solar Opposites'),
+    ('Dexter', 'Labotatório de Dexter');
