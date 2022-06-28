@@ -47,7 +47,7 @@ const findById = async (id) => {
 
 const createAuthor = async (firstName, middleName, lastName) => {
   const validAuthor = isValid(firstName, middleName, lastName);
-
+  
   if (!validAuthor) return false;
 
   const [author] = await Author.createAuthor(firstName, middleName, lastName);
